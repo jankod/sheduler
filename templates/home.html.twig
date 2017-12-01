@@ -1,0 +1,57 @@
+{% extends "base.html.twig" %}
+{# / https://symfony.com/blog/new-in-symfony-3-4-bootstrap-4-form-theme #}
+
+
+{% block body %}
+
+    <header class="app-header navbar">
+        <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </header>
+
+    <div class="app-body">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-primary">NEW</span></a>
+                    </li>
+
+                </ul>
+            </nav>
+            <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+        </div>
+
+        <!-- Main content -->
+        <main class="main">
+
+            <div class="container-fluid">
+                <div id="ui-view"></div>
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+
+    </div>
+
+    <footer class="app-footer">
+        <span><a href="http://coreui.io">CoreUI</a> &copy; 2017 creativeLabs.</span>
+        <span class="ml-auto">Powered by <a href="http://coreui.io">CoreUI</a></span>
+    </footer>
+
+    <!-- Bootstrap and necessary plugins -->
+    {#<script src="node_modules/jquery/dist/jquery.min.js"></script>#}
+    {#<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>#}
+    {#<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>#}
+    {#<script src="node_modules/pace-progress/pace.min.js"></script>#}
+
+    {#<!-- CoreUI main scripts -->#}
+
+    {#<script src="js/app.js"></script>#}
+
+{% endblock %}
