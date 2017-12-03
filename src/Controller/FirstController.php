@@ -14,7 +14,7 @@ class FirstController extends Controller
 
 
     /**
-     * @Route("/")
+     * @Route("/", name="home")
      * @param LoggerInterface $log
      * @return Response
      */
@@ -27,11 +27,19 @@ class FirstController extends Controller
 
     /**
      * @return Response
-     * @Route("/index")
+     * @Route("/second", name="second")
      */
-    public function index()
+    public function second()
     {
-        return new Response("Ovo je rezulst");
+        return $this->render('second.html.twig');
 
+    }
+
+    /**
+     * @Route("/page1")
+     */
+    public function page1()
+    {
+        return $this->render('page1.html.twig');
     }
 }

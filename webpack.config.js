@@ -14,7 +14,9 @@ Encore
     .addEntry('app', './assets/js/app.js')
 
     // allow sass/scss files to be processed
-    .enableSassLoader()
+    .enableSassLoader(function (sassOptions) {
+        sassOptions.resolveUrlLoader = true;
+    })
 
     // allow legacy applications to use $/jQuery as a global variable
     .autoProvidejQuery()
@@ -35,3 +37,10 @@ Encore
 ;
 
 module.exports = Encore.getWebpackConfig();
+
+module.exports.resolve =
+    { // peace radi probleme
+        alias: {
+            pace: 'pace-progress'
+        }
+    }

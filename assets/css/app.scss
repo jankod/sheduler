@@ -1,3 +1,7 @@
-// @import "~@coreui/ajax/AJAX_Full_Project_GULP/src/scss/*";
-@import "~bootstrap/scss/bootstrap";
-@import "~@coreui/ajax/AJAX_Starter_GULP/src/scss/style";
+
+// RADI za bootstrap dashboard
+// the ~ allows you to reference things in node_modules
+//@import '~bootstrap/scss/bootstrap';
+//@import "dashboard.css";
+
+@import "style.min.css";
