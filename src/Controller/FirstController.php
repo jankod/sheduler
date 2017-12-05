@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 
+use App\Entity\User;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,6 +21,17 @@ class FirstController extends Controller
      */
     public function home(LoggerInterface $log)
     {
+
+        $m = $this->getDoctrine()->getManager();
+//        $user = new User();
+//        $user->setActive(true)
+//            ->setEmail('jdiminic@gmailc.om')
+//            ->setUsername($user->getEmail())
+//            ->setPassword('sdfdsfsdfweqr');
+//        $m->persist($user);
+//        $m->flush();
+        $repo = $this->getDoctrine()->getRepository(User::class);
+        
         $log->debug("OPvo je poroi");
         $var = "pero";
         return $this->render('home.html.twig', ['name' => $var]);
@@ -36,7 +48,7 @@ class FirstController extends Controller
     }
 
     /**
-     * @Route("/page1")
+     * @Route("/page1", name="page1")
      */
     public function page1()
     {

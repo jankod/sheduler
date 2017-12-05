@@ -1,2 +1,4 @@
 # sheduler
-simple symfony 4, coreui web app demo
+## Calendar app
+Simple Symfony 4, coreui web app demo.
+

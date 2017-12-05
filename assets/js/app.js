@@ -10,13 +10,14 @@ require('popper.js');
 // no need to set this to a variable, just require it
 require('bootstrap');
 
-require('pace-progress');
-
+pace = require('pace-progress');
+pace.start()
 
 // require('@coreui/ajax/Static_Starter_GULP/src/js/app.js')
 
 // require('@coreui/ajax')
 
+require('./coreui-app.js');
 
 $(document).ready(function () {
 

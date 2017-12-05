@@ -1,14 +1,15 @@
 framework:
+    ide: 'phpstorm://open?file=%%f&line=%l'
     secret: '%env(APP_SECRET)%'
-    #default_locale: en
-    #csrf_protection: ~
+    default_locale: hr
+    csrf_protection: { enabled: true }
     #http_method_override: true
     #trusted_hosts: ~
 
     # uncomment this entire section to enable sessions
-    #session:
+    session:
     #    # With this config, PHP's native session handling is used
-    #    handler_id: ~
+        handler_id: ~
 
     #esi: ~
     #fragments: ~
