@@ -21,6 +21,8 @@ class UserRepository extends ServiceEntityRepository
      */
     public function loadUserByUsername($username)
     {
+
+        dump("Trazim ". $username);
         return $this->createQueryBuilder('u')
             ->where('u.username = :username OR u.email = :email')
             ->setParameter('username', $username)

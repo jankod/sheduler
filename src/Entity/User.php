@@ -47,6 +47,13 @@ class User implements UserInterface, \Serializable
      */
     private $active;
 
+
+    /**
+     * @-ORM\Column(type="string", length=60)
+     * @var string
+     */
+    private $roles;
+
     /**
      * @return int
      */
@@ -188,7 +195,7 @@ class User implements UserInterface, \Serializable
      */
     public function getRoles()
     {
-        return [self::ROLE_USER];
+        return [self::ROLE_ADMIN];
     }
 
     /**
